@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/components/HelloWorld';
+import HelloWorld from '@/html/HelloWorld';
 import index from '@/html/index';
 import about from '@/html/about';
 

@@ -5,7 +5,7 @@
 </template>
 
 <script>
-    import goTop from '../components/go-top';
+    import goTop from './go-top';
 
     export default {
         name: 'm-footer',

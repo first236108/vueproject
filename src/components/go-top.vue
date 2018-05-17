@@ -1,9 +1,6 @@
 <template>
     <div class="pagetop animated" :class="[{fadeInUp:scroll},{fadeOutDown:fadeout},{dis_none:display_init}]">
-        <a @click="toTop(300)" class="btn_pagetop"><span>TOP</span></a>
-        <p>{{scroll}}</p>
-        <p>{{display_init}}</p>
-        <p>{{fadeout}}</p>
+        <a @click="toTop(400)" class="btn_pagetop"><span>TOP</span></a>
     </div>
 </template>
 
@@ -19,7 +16,6 @@
         },
         methods: {
             toTop(scrollDuration){
-                this.fadeout=!this.scroll;
                 let cosParameter = window.scrollY / 2,
                     scrollCount = 0,
                     oldTimestamp = performance.now();
@@ -32,17 +28,22 @@
                     window.requestAnimationFrame(step);
                 }
                 window.requestAnimationFrame(step);
+                // document.getElementsByClassName('pagetop')[0].style.display='none';
             }
         },
-
         created() {
             let vm=this;
             window.onscroll=function(){
-                this.fadeout=this.scroll && (this.fadeout ^ this.scroll);
-                if (document.documentElement.scrollTop>80) {
+                if (document.documentElement.scrollTop>100) {
+                    document.getElementsByClassName('pagetop')[0].style.display='block';
                     vm.display_init=false;
+                    vm.fadeout=false;
                     vm.scroll=true;
                 }else {
+                    if (!vm.display_init){
+                        vm.fadeout = true;
+                        vm.scroll && setTimeout(()=>{document.getElementsByClassName('pagetop')[0].style.display='none';},300);
+                    }
                     vm.scroll=false;
                 }
             }
@@ -58,7 +59,7 @@
         right: 5%;
         bottom: 55px;
         z-index: 100;
-        transition:all 1s ease-out;
+        transition:all 0.7s ease-out;
     }
 
     .dis_none{

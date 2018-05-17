@@ -8,8 +8,8 @@
 </template>
 
 <script>
-    import mHeader from './html/m-header';
-    import mFooter from './html/m-footer';
+    import mHeader from './components/m-header';
+    import mFooter from './components/m-footer';
     export default {
         name: 'App',
         data(){
