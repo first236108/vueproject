@@ -2,7 +2,7 @@
     <header class="sp is_absolute">
         <div class="h_inner cf">
             <div class="h_head cf">
-                <h1 class="h_logo"><a href="/"><img src="../assets/images/logo.png" alt="天源美容"></a>{{sns_active}}</h1>
+                <h1 class="h_logo"><a href="/"><img src="../../static/images/logo.png" alt="天源美容"></a></h1>
                 <ul class="h_sns cf animated" :class="[{flipInX:isopen},sns_active,{dis_none:!sns_active}]">
                     <li class="h_blog">
                         <a href="/blog/"><span>BLOG</span></a>
@@ -60,12 +60,7 @@
             hide_element:function(){
                 document.getElementsByClassName('h_bottom')[0].classList.add('dis_none');
                 document.getElementsByClassName('h_sns')[0].classList.add('dis_none');
-                setTimeout(()=>{this.show_element();},700);
             },
-            show_element:function(){
-                document.getElementsByClassName('h_bottom')[0].classList.remove('dis_none');
-                document.getElementsByClassName('h_sns')[0].classList.remove('dis_none');
-            }
         }
     };
 </script>
@@ -76,6 +71,7 @@
         animation-duration: 1s;
         animation-timing-function: ease;
         animation-play-state: running;
+        height:65px;
     }
 
     header {

@@ -1,31 +1,26 @@
 <template>
-    <div>
-        <h1 :class="{ch1:democlass}">asdfasdfasdf</h1>
-        <button type="button" @click="sample">测试</button>
-    </div>
+    <carrousel :images="res.slide"></carrousel>
 </template>
 
 
-
 <script>
+    import carrousel from '../components/carousel';
     export default {
         name: 'index',
-        data(){
+        data() {
             return {
-                democlass:false
-            }
+                democlass: false
+            };
         },
-        methods:{
-            sample:function(){
-                this.democlass=!this.democlass;
-            }
+        components: {
+            carrousel
+        },
+        created(){
+            this.axios.post();
         }
     }
 </script>
 
 <style>
-    .ch1{
-        display:none;
-        transition:all 1s ease;
-    }
+
 </style>

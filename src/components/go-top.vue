@@ -69,7 +69,7 @@
     .btn_pagetop {
         display: block;
         height: 100%;
-        background: #333333;
+        background: rgba(231, 32, 138, 0.68);
         border-radius: 50%;
         text-align: center;
         letter-spacing: 0.2em;

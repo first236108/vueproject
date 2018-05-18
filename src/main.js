@@ -3,6 +3,10 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
+import VueAwesomeSwiper from 'vue-awesome-swiper';
+import axios from 'axios';
+Vue.use(VueAwesomeSwiper);
+Vue.prototype.axios=axios;
 
 Vue.config.productionTip = false;
 

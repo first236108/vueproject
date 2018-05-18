@@ -1,4 +1,3 @@
-
 <template>
     <div id="app" ref="viewBox">
         <m-header></m-header>
@@ -24,14 +23,18 @@
     };
 </script>
 <style>
-    @import "./assets/css/common.css";
-    @import "./assets/css/animate.css";
+    @import "../static/css/common.css";
+    @import "../static/css/animate.css";
+    @import "../static/css/animate.css";
+    body{
+        margin:0;
+    }
     #app {
         font-family: 'Avenir', Helvetica, Arial, sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         text-align: center;
         color: #2c3e50;
-        margin-top: 60px;
+        margin-top: 65px;
     }
 </style>
