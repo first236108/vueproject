@@ -81,6 +81,7 @@
         top: 0;
         left: 0;
         background: none;
+        z-index: 999;
     }
 
     .h_inner {

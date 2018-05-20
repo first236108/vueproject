@@ -1,7 +1,7 @@
 <template>
     <div class="carrousel">
         <swiper :options="swiperOption" ref="mySwiper">
-            <swiper-slide v-for="(img, key) in images">
+            <swiper-slide v-for="img in images">
                 <a :href="img.link"><img :src="img.path" alt="img.description"></a>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>

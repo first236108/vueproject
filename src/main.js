@@ -5,15 +5,23 @@ import App from './App';
 import router from './router';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import axios from 'axios';
-Vue.use(VueAwesomeSwiper);
-Vue.prototype.axios=axios;
+import Toasted from 'vue-toasted';
 
+Vue.use(VueAwesomeSwiper);
+Vue.use(Toasted);
+
+Vue.prototype.axios=axios.create({baseURL:'http://test.ap.scsj.net.cn'});
 Vue.config.productionTip = false;
+
 
 /* eslint-disable no-new */
 new Vue({
     el: '#app',
     router,
     components: {App},
-    template: '<App/>'
+    template: '<App/>',
+    created:()=>{
+        this.$toasted.show('asdf');
+        // console.log(this.$toasted.show('网络错误,请稍后再试'));
+    }
 });

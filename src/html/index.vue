@@ -1,5 +1,5 @@
 <template>
-    <carrousel :images="res.slide"></carrousel>
+    <carrousel :images="data.slide"></carrousel>
 </template>
 
 
@@ -9,14 +9,22 @@
         name: 'index',
         data() {
             return {
-                democlass: false
+                democlass: false,
+                data:{}
             };
         },
         components: {
             carrousel
         },
         created(){
-            this.axios.post();
+            // toast.show('网络错误,请稍后再试');
+            this.axios.get('/sms',{
+                'phoneNo':'13007686112'
+            }).then(res=>{
+                console.log(res);
+            }).catch(e=>{
+                // this.$toast.show('网络错误,请稍后再试');
+            });
         }
     }
 </script>
