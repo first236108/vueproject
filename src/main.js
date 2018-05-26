@@ -5,12 +5,13 @@ import App from './App';
 import router from './router';
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 import axios from 'axios';
-import Toasted from 'vue-toasted';
+import toast from 'vue-toasted';
 
 Vue.use(VueAwesomeSwiper);
-Vue.use(Toasted);
+Vue.use(toast);
 
 Vue.prototype.axios=axios.create({baseURL:'http://test.ap.scsj.net.cn'});
+
 Vue.config.productionTip = false;
 
 
@@ -20,8 +21,4 @@ new Vue({
     router,
     components: {App},
     template: '<App/>',
-    created:()=>{
-        this.$toasted.show('asdf');
-        // console.log(this.$toasted.show('网络错误,请稍后再试'));
-    }
 });
