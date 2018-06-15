@@ -25,7 +25,6 @@
 <style>
     @import "../static/css/common.css";
     @import "../static/css/animate.css";
-    @import "../static/css/animate.css";
     body{
         margin:0;
     }
