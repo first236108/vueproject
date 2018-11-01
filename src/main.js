@@ -10,7 +10,7 @@ import toast from 'vue-toasted';
 Vue.use(VueAwesomeSwiper);
 Vue.use(toast);
 
-Vue.prototype.axios=axios.create({baseURL:'http://test.ap.scsj.net.cn'});
+Vue.prototype.axios=axios.create({baseURL:'http://api.scsj.net.cn'});
 
 Vue.config.productionTip = false;
 
